@@ -44,6 +44,8 @@ If the Go binary directory is not already on your `PATH`, use:
 PATH="$(go env GOPATH)/bin:$PATH" air
 ```
 
+The Air configuration uses `tmp/main.exe` as the temporary binary name on every operating system. Linux can run the binary with this suffix, and Windows requires it, so the same `air` command works on both platforms.
+
 Air reads [.air.toml](./.air.toml), watches Go, HTML, JavaScript, and CSS files, and rebuilds/restarts the server after changes are saved.
 
 Open [http://localhost:8080](http://localhost:8080) in a browser.
